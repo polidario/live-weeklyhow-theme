@@ -18,6 +18,12 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    <style>
+      body {
+        background: {{ settings.background }};
+      }
+    </style>
+
     {{ content_for_header }}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
   </head>
