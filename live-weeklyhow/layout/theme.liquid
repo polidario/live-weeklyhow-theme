@@ -19,7 +19,7 @@
     {% endif %}
 
     {{ content_for_header }}
-    {{ 'theme.css' |  asset_url |  stylesheet_tag }}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body>
@@ -27,6 +27,5 @@
     <main id="MainContent" class="container mx-auto" role="main">
       {{ content_for_layout }}
     </main>
-
   </body>
 </html>
