@@ -33,5 +33,7 @@
     <main id="MainContent" class="container mx-auto" role="main">
       {{ content_for_layout }}
     </main>
+
+    {{ 'header.js' | asset_url | script_tag }}
   </body>
 </html>
