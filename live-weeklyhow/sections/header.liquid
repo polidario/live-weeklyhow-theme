@@ -70,8 +70,12 @@
     </ul>
     {% if shop.customer_accounts_enabled %}
       <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-x-4">
-        <a href="{{ routes.account_login_url }}" class="text-sm font-semibold leading-6 text-gray-900">Log in</a>
-        <a href="{{ routes.account_register_url }}" class="text-sm font-semibold text-white bg-gray-700 hover:bg-gray-900 px-4 py-2 rounded">Sign up</a>
+        {% if customer %}
+          <a href="{{ routes.account_logout_url }}" class="text-sm font-semibold leading-6 text-gray-900">Log out</a>
+        {% else %}
+          <a href="{{ routes.account_login_url }}" class="text-sm font-semibold leading-6 text-gray-900">Log in</a>
+          <a href="{{ routes.account_register_url }}" class="text-sm font-semibold text-white bg-gray-700 hover:bg-gray-900 px-4 py-2 rounded">Sign up</a>
+        {% endif %}
       </div>
     {% endif %}
     
@@ -118,9 +122,16 @@
                 {% endif %}
             {% endfor %}
           </div>
-          <div class="py-6">
-            <a href="{{ routes.account_login_url }}" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-          </div>
+          {% if customer %}
+            <div class="py-6">
+              <a href="{{ routes.account_logout_url }}" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log out</a>
+            </div>
+          {% else %}
+            <div class="py-6">
+              <a href="{{ routes.account_login_url }}" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+            </div>
+          {% endif %}
+          
         </div>
       </div>
     </div>
