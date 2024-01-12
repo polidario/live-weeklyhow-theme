@@ -1,22 +1,24 @@
 <div class="pt-24 my-10">
     <div class="px-12 mx-auto max-w-7xl">
         <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-            <h1 class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
+            <h1 class="primary-text mb-8 text-4xl font-extrabold leading-none tracking-normal md:text-6xl md:tracking-tight">
                 {{ section.settings.hero_heading_title }}
             </h1>
-            <p class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
+            <p class="primary-text px-0 mb-8 text-lg md:text-xl lg:px-24">
                 {{ section.settings.hero_text }}
             </p>
             <div class="space-x-0 md:space-x-2">
                 {% if section.settings.hero_primary_button_text and section.settings.hero_primary_button_url %}
-                    <a href="{{ section.settings.hero_primary_button_url }}" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-green-400 rounded-2xl sm:w-auto sm:mb-0">
+                    <a href="{{ section.settings.hero_primary_button_url }}" 
+                        class="inline-flex items-center justify-center w-full button primary-button rounded-2xl sm:w-auto sm:mb-0">
                         {{ section.settings.hero_primary_button_text }}
                         {% include 'icon-arrow-left' %}
                     </a>
                 {% endif %}
                 
                 {% if section.settings.hero_secondary_button_text and section.settings.hero_secondary_button_url %}
-                    <a href="{{ section.settings.hero_secondary_button_url }}" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 rounded-2xl sm:w-auto sm:mb-0">
+                    <a href="{{ section.settings.hero_secondary_button_url }}" 
+                        class="inline-flex items-center justify-center w-full button secondary-button rounded-2xl sm:w-auto sm:mb-0">
                         {{ section.settings.hero_secondary_button_text }}
                         {% include 'icon-light-bulb' %}
                     </a>

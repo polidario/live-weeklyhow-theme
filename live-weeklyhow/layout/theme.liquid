@@ -19,8 +19,27 @@
     {% endif %}
 
     <style>
+      :root {
+        {% for scheme in settings.color_schemes %}
+          --{{ scheme }}-background: {{ scheme.settings.background }};
+          --{{ scheme }}-primary-color: {{ scheme.settings.primary_color }};
+          --{{ scheme }}-on-primary-color: {{ scheme.settings.on_primary_color }};
+          --{{ scheme }}-primary-border-color: {{ scheme.settings.primary_border_color }};
+          --{{ scheme }}-secondary-color: {{ scheme.settings.secondary_color }};
+          --{{ scheme }}-on-secondary-color: {{ scheme.settings.on_secondary_color }};
+          --{{ scheme }}-secondary-border-color: {{ scheme.settings.secondary_border_color }};
+          --{{ scheme }}-text-color: {{ scheme.settings.text_color }};
+          --{{ scheme }}-links-color: {{ scheme.settings.links_color }};
+          --{{ scheme }}-icons-color: {{ scheme.settings.icons_color }};
+        {% endfor %}
+      }
+
       body {
-        background: {{ settings.background }};
+          background: var(--{{ settings.color_schemes | first |  append: '-background' }});
+      }
+
+      .primary-button {
+          background-color: var(--{{ settings.color_schemes | first |  append: '-primary-color' }});
       }
     </style>
 
@@ -29,8 +48,9 @@
   </head>
 
   <body>
+    
     {% section 'header' %}
-    <main id="MainContent" class="container mx-auto" role="main">
+    <main id="MainContent" class="container mx-auto {{ settings.color_schemes | first }}" role="main">
       {{ content_for_layout }}
     </main>
 

@@ -48,3 +48,17 @@
         location.search = new URLSearchParams(Shopify.queryParams).toString();
     });
 </script>
+
+{% schema %}
+{
+    "name": "Collection Page",
+    "settings": [
+        {
+            "type": "color_scheme",
+            "id": "example",
+            "label": "Color scheme",
+            "default": "scheme-1"
+        }
+    ]
+}
+{% endschema %}

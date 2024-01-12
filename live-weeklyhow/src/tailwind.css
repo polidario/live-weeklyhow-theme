@@ -9,3 +9,33 @@
 .dropdown:hover #dropdownContainer {
     display: block;
 }
+
+body {
+    background: var(--{{ settings.color_schemes | first |  append: '-background' }});
+}
+
+.primary-text {
+    color: var(--{{ settings.color_schemes | first |  append: '-text-color' }})
+}
+
+.primary-button {
+    background-color: var(--{{ settings.color_schemes | first |  append: '-primary-color' }});
+    border: 0.05rem solid var(--{{ settings.color_schemes | first |  append: '-primary-border-color' }});
+}
+
+.primary-button:hover {
+    background-color: var(--{{ settings.color_schemes | first |  append: '-on-primary-color' }});
+}
+
+.secondary-button {
+    background-color: var(--{{ settings.color_schemes | first |  append: '-secondary-color' }});
+    border: 0.05rem solid var(--{{ settings.color_schemes | first |  append: '-secondary-border-color' }});
+}
+
+.secondary-button:hover {
+    background-color: var(--{{ settings.color_schemes | first |  append: '-on-secondary-color' }});
+}
+
+.button {
+    @apply font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white
+}

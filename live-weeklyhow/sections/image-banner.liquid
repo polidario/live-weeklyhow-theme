@@ -1,13 +1,13 @@
 <div class="text-gray-900 my-10">
     <div class="flex flex-row {% if section.settings.layout == "image-left" %} flex-row-reverse {% endif %} %} gap-y-5 justify-between">
         <div class="container mx-auto flex flex-col items-center px-4 py-16 text-center w-1/2">
-            <h1 class="text-2xl font-bold leadi">Quisquam necessita vel
+            <h1 class="primary-text text-2xl font-bold">Quisquam necessita vel
                 <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">delectus</span> 
             </h1>
-            <p class="px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
-            <div class="flex flex-wrap justify-center">
-                <button class="px-8 py-3 m-2 text-lg font-semibold rounded bg-green-400 text-gray-900">Get started</button>
-                <button class="px-8 py-3 m-2 text-lg border rounded bg-white text-gray-900 border-gray-100">Learn more</button>
+            <p class="primary-text px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="button primary-button">Get started</button>
+                <button class="button secondary-button">Learn more</button>
             </div>
         </div>
         
@@ -23,7 +23,7 @@
 
 {% schema %}
 {
-    "name": "Pintolli",
+    "name": "Image Banner with Text",
     "tag": "section",
     "settings": [
             {
@@ -53,7 +53,7 @@
         ],
     "presets": [
         {
-            "name": "Pintolli"
+            "name": "Image Banner with Text"
         }
     ]
 }

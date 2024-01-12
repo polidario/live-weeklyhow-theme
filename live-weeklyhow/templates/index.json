@@ -2,7 +2,10 @@
     "sections": {
         "hero-section": {
             "type": "hero"
+        },
+        "image-banner-with-text": {
+            "type": "image-banner"
         }
     },
-    "order": ["hero-section"]
+    "order": ["hero-section", "image-banner-with-text"]
 }
