@@ -17,7 +17,6 @@
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
-
     <style>
       :root {
         {% for scheme in settings.color_schemes %}
@@ -32,14 +31,6 @@
           --{{ scheme }}-links-color: {{ scheme.settings.links_color }};
           --{{ scheme }}-icons-color: {{ scheme.settings.icons_color }};
         {% endfor %}
-      }
-
-      body {
-          background: var(--{{ settings.color_schemes | first |  append: '-background' }});
-      }
-
-      .primary-button {
-          background-color: var(--{{ settings.color_schemes | first |  append: '-primary-color' }});
       }
     </style>
 
