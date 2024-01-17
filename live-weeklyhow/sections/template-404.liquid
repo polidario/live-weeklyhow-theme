@@ -3,9 +3,9 @@
 >
   <div class="px-40 py-20 bg-white rounded-md shadow-xl my-10">
     <div class="flex flex-col items-center gap-y-5">
-      <h1 class="font-bold text-green-800 text-9xl">404</h1>
+      <h1 class="primary-text font-bold text-9xl">404</h1>
 
-      <h6 class="mb-2 text-2xl font-bold text-center text-gray-800 md:text-3xl">
+      <h6 class="primary-text mb-2 text-2xl font-bold text-center md:text-3xl">
         {{ section.settings.primary_text }}
       </h6>
 
@@ -16,7 +16,7 @@
 
         {% if section.settings.primary_button_text and section.settings.primary_button_url %}
             <a href="{{ section.settings.primary_button_url }}"
-                class="px-6 py-2 text-sm font-semibold text-green-800 bg-green-100"
+                class="button primary-button"
             >{{ section.settings.primary_button_text }}</a>
         {% endif %}
       
