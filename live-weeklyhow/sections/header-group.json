@@ -1,0 +1,16 @@
+{
+    "type": "header",
+    "name": "Header Section Group",
+    "sections": {
+        "announcement-bar": {
+            "type": "announcement-bar",
+            "settings": {
+                "enable_countdown": true
+            }
+        },
+        "header": {
+            "type": "header"
+        }
+    },
+    "order": ["header"]
+}
