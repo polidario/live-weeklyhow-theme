@@ -12,5 +12,5 @@
             "type": "header"
         }
     },
-    "order": ["header"]
+    "order": ["announcement-bar", "header"]
 }
