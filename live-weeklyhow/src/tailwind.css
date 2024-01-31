@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-small {
+    @apply text-lg
+}
+
+.text-medium {
+    @apply text-xl
+}
+
+.text-large {
+    @apply text-2xl
+}
+
 #dropdownContainer {
     display: none;
 }

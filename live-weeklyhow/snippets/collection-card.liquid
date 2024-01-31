@@ -2,7 +2,9 @@
 	<div class="bg-white shadow-md rounded-lg max-w-sm">
 		<a href="{{ collection.url }}">
             {% if collection.image != nil %}
-                {{ collection.image | image_url: width: 512 | image_tag }}
+                <div class="w-full overflow-hidden">
+                    {{ collection.image | image_url: width: 512 | image_tag: class: 'hover:scale-125 transition ease-in-out duration-300' }}
+                </div>
             {% else %}
                 {% assign num = index | modulo: 4 %}
                 {% if num < 1 %}
