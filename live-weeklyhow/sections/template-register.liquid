@@ -1,4 +1,4 @@
-<div class="my-10">
+<div class="my-10 w-100 md:w-1/2 mx-auto px-5">
     <h1 class="text-xl font-bold my-5">Customer Registration</h1>
     {% form 'create_customer', novalidate: 'novalidate', class: 'flex flex-col gap-y-5' %}
         {% if form.errors %}
@@ -13,7 +13,7 @@
                 type="text" 
                 name="customer[first_name]"
                 id="customerFirstName"
-                class="p-4 border-2 border-green-500 rounded-full"
+                class="p-4 border-2 rounded-md"
             />
         </div>
 
@@ -23,7 +23,7 @@
                 type="text" 
                 name="customer[last_name]"
                 id="customerLastName"
-                class="p-4 border-2 border-green-500 rounded-full"
+                class="p-4 border-2 rounded-md"
             />
         </div>
 
@@ -33,7 +33,7 @@
                 type="email" 
                 name="customer[email]"
                 id="customerEmail"
-                class="p-4 border-2 border-green-500 rounded-full"
+                class="p-4 border-2 rounded-md"
             />
         </div>
 
@@ -43,11 +43,11 @@
                 type="password" 
                 name="customer[password]"
                 id="customerPassword"
-                class="p-4 border-2 border-green-500 rounded-full"
+                class="p-4 border-2 rounded-md"
             />
         </div>
 
-        <button type="submit" class="px-5 py-3 bg-green-500 font-medium hover:bg-green-700 rounded-full">Sign up</button>
+        <button type="submit" class="button primary-button">Sign up</button>
 
     {% endform %}
 </div>
