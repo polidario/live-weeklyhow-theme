@@ -17,6 +17,23 @@
           }
         }
       }
+    },
+    "Dark mode": {
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#FFFFFF",
+            "text_color": "#121212",
+            "primary_color": "#121212",
+            "on_primary_color": "#FFFFFF",
+            "primary_border_color": "#121212",
+            "secondary_color": "#121212",
+            "on_secondary_color": "#FFFFFF",
+            "secondary_border_color":"#121212",
+            "links_color": "#121212"
+          }
+        }
+      }
     }
   }
 }
