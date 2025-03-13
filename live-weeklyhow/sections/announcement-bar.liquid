@@ -1,10 +1,10 @@
 {% if section.settings.enable_countdown == true %}
-    <div class="flex flex-row justify-between items-center gap-4 bg-gray-700 p-5 text-white">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 bg-gray-700 p-5 text-white">
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'text' %}
                     <div>
-                        <span class="text-lg font-medium">{{ block.settings.announcement_text }}</span>
+                        <p class="text-body text-center md:text-left md:text-lg font-medium">{{ block.settings.announcement_text }}</p>
                     </div>
                 {% when 'countdown' %}
                     <div class="flex flex-row gap-x-5 p-4" id="countdown" data-date="{{ block.settings.future_date }}" data-time="{{ block.settings.hours_and_minutes }}">
