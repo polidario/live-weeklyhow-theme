@@ -13,7 +13,7 @@
                         {{ block.settings.hero_text }}
                     </p>
                 {% when "buttons" %}
-                    <div class="flex flex-row space-x-0 md:space-x-2 {{ block.settings.buttons_align }}">
+                    <div class="flex flex-row space-x-2 md:space-x-4 {{ block.settings.buttons_align }}">
                         {% if block.settings.hero_primary_button_text and block.settings.hero_primary_button_url %}
                             <a href="{{ block.settings.hero_primary_button_url }}" 
                                 class="inline-flex items-center justify-center w-full button primary-button rounded-2xl sm:w-auto sm:mb-0">

@@ -2,15 +2,46 @@
     "type": "header",
     "name": "Header Section Group",
     "sections": {
-        "announcement-bar": {
-            "type": "announcement-bar",
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "text_bbVMwb": {
+            "type": "text",
             "settings": {
-                "enable_countdown": true
+              "announcement_text": "All assets used on this website are for educational purposes only and are the property of their respective copyright holders."
             }
+          },
+          "countdown_7akLAg": {
+            "type": "countdown",
+            "settings": {
+              "future_date": "18-01-2028",
+              "hours_and_minutes": "10:30"
+            }
+          },
+          "button_9k3yAw": {
+            "type": "button",
+            "settings": {
+              "link_url": "https://weeklyhow.com",
+              "label": "Back to WeeklyHow"
+            }
+          }
         },
-        "header": {
-            "type": "header"
+        "block_order": [
+          "text_bbVMwb",
+          "countdown_7akLAg",
+          "button_9k3yAw"
+        ],
+        "settings": {
+          "enable_countdown": true
         }
+      },
+      "header": {
+        "type": "header",
+        "settings": {}
+      }
     },
-    "order": ["announcement-bar", "header"]
-}
+    "order": [
+      "announcement-bar",
+      "header"
+    ]
+  }
