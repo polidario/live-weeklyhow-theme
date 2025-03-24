@@ -108,11 +108,13 @@
     }
 
     .secondary-button {
+        color: var(--{{ settings.color_schemes | first |  append: '-secondary-border-color' }}) !important;
         background-color: var(--{{ settings.color_schemes | first |  append: '-secondary-color' }});
         border: 0.05rem solid var(--{{ settings.color_schemes | first |  append: '-secondary-border-color' }});
     }
 
     .secondary-button:hover {
+        color: white !important;
         background-color: var(--{{ settings.color_schemes | first |  append: '-on-secondary-color' }});
     }
 

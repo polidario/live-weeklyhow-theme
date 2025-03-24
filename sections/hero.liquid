@@ -13,12 +13,12 @@
                         {{ block.settings.hero_text }}
                     </p>
                 {% when "buttons" %}
-                    <div class="flex flex-row space-x-2 md:space-x-4 {{ block.settings.buttons_align }}">
+                    <div class="flex flex-col md:flex-row gap-4 {{ block.settings.buttons_align }}">
                         {% if block.settings.hero_primary_button_text and block.settings.hero_primary_button_url %}
                             <a href="{{ block.settings.hero_primary_button_url }}" 
                                 class="inline-flex items-center justify-center w-full button primary-button rounded-2xl sm:w-auto sm:mb-0">
                                 {{ block.settings.hero_primary_button_text }}
-                                {% include 'icon-arrow-left' %}
+                                {% render 'icon-arrow-left' %}
                             </a>
                         {% endif %}
                         
@@ -26,7 +26,7 @@
                             <a href="{{ block.settings.hero_secondary_button_url }}" 
                                 class="inline-flex items-center justify-center w-full button secondary-button rounded-2xl sm:w-auto sm:mb-0">
                                 {{ block.settings.hero_secondary_button_text }}
-                                {% include 'icon-light-bulb' %}
+                                {% render 'icon-light-bulb' %}
                             </a>
                         {% endif %}
                     </div>
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 {% if block.settings.hero_image %}
-                                    {{ block.settings.hero_image | image_url: width: 2000 | image_tag: class: 'w-full h-auto', loading: 'lazy' }}
+                                    {{ block.settings.hero_image | image_url: width: 2000 | image_tag: class: 'w-full h-auto m-0 rounded-bl-lg rounded-t-none rounded-b-lg', loading: 'lazy' }}
                                 {% else %}
                                     <div class="w-full bg-white">
                                         {{ 'lifestyle-1' | placeholder_svg_tag: 'relative w-full h-auto px-5 py-10 md:px-10 md:py-20' }}

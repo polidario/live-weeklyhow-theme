@@ -1,4 +1,13 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "hero-section": {
       "type": "hero",
@@ -6,14 +15,14 @@
         "heading_title_Kc7F9h": {
           "type": "heading_title",
           "settings": {
-            "hero_heading_title": "<span>Start</span> <span class=\"block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline\">Shreking Havoc</span> <span>around your business ?</span>",
+            "hero_heading_title": "<span>Start</span> <span class=\"block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline\">Unleash Creativity</span> <span>with every stroke</span>",
             "hero_heading_title_align": "center"
           }
         },
         "text_rqhPLB": {
           "type": "text",
           "settings": {
-            "hero_text": "Embark on a quest to seize the attention you've been yearning for with our ogre-sized templates and designs, specially forged to assist you in narrating your epic tale. Get ready to make your story roar louder than a dragon's roar!"
+            "hero_text": "Discover a vibrant world of colors with our premium pens. Whether you're sketching, writing, or adding flair to your projects, our pens bring your ideas to life in the most vivid way. Elevate your creativity today!"
           }
         },
         "buttons_cBTQnf": {
@@ -29,7 +38,7 @@
         "image_L3cMb7": {
           "type": "image",
           "settings": {
-            "hero_image": "shopify://shop_images/shrek-republic.png"
+            "hero_image": "shopify://shop_images/free-shipping-written-in-notebook.jpg"
           }
         }
       },
