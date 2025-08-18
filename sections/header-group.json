@@ -1,47 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "type": "header",
-    "name": "Header Section Group",
-    "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "blocks": {
-          "text_bbVMwb": {
-            "type": "text",
-            "settings": {
-              "announcement_text": "All assets used on this website are for educational purposes only and are the property of their respective copyright holders."
-            }
-          },
-          "countdown_7akLAg": {
-            "type": "countdown",
-            "settings": {
-              "future_date": "18-01-2028",
-              "hours_and_minutes": "10:30"
-            }
-          },
-          "button_9k3yAw": {
-            "type": "button",
-            "settings": {
-              "link_url": "https://weeklyhow.com",
-              "label": "Back to WeeklyHow"
-            }
+  "type": "header",
+  "name": "Header Section Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text_bbVMwb": {
+          "type": "text",
+          "settings": {
+            "announcement_text": "All assets used on this website are for educational purposes only and are the property of their respective copyright holders."
           }
         },
-        "block_order": [
-          "text_bbVMwb",
-          "countdown_7akLAg",
-          "button_9k3yAw"
-        ],
-        "settings": {
-          "enable_countdown": true
+        "button_9k3yAw": {
+          "type": "button",
+          "settings": {
+            "link_url": "https://polidario.com",
+            "label": "Back to my website"
+          }
         }
       },
-      "header": {
-        "type": "header",
-        "settings": {}
+      "block_order": [
+        "text_bbVMwb",
+        "button_9k3yAw"
+      ],
+      "settings": {
+        "enable_countdown": true
       }
     },
-    "order": [
-      "announcement-bar",
-      "header"
-    ]
-  }
+    "header": {
+      "type": "header",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

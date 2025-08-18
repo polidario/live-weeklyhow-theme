@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "current": {
     "sections": {
       "footer": {
@@ -77,12 +77,12 @@
         "settings": {
           "background": "#ffffff",
           "primary_color": "#121212",
-          "on_primary_color": "#ffffff",
+          "on_primary_color": "#1e1e1e",
           "primary_border_color": "#121212",
           "secondary_color": "#ffffff",
           "on_secondary_color": "#000000",
           "secondary_border_color": "#121212",
-          "icons_color": "#4A3723",
+          "icons_color": "#4a3723",
           "links_color": "#121212",
           "text_color": "#121212"
         }
