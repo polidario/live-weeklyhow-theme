@@ -36,7 +36,7 @@
 
     {{ content_for_header }}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
-    {{ 'countdown.js' | asset_url | script_tag }}
+    <script src="{{ 'countdown.js' | asset_url }}" defer></script>
   </head>
 
   <body>
@@ -49,7 +49,7 @@
       {{ content_for_layout }}
     </main>
 
-    {{ 'header.js' | asset_url | script_tag }}
+    <script src="{{ 'header.js' | asset_url }}" defer></script>
   </body>
   {% section 'footer' %}
 </html>

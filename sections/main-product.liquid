@@ -1,0 +1,105 @@
+<div class="container mx-auto px-6 py-10">
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+    <div class="lg:col-span-3 space-y-4">
+      {% if product.media.size > 0 %}
+        <div class="space-y-4">
+          {% assign featured_media = product.featured_media | default: product.media.first %}
+          <div>
+            {{ featured_media | media_tag: image_size: "2000x" }}
+          </div>
+          <div class="grid grid-cols-5 gap-4 mt-4">
+            {% for m in product.media %}
+              <a href="{{ m.preview_image | image_url: width: 2000 }}" class="block">
+                {{ m | media_tag: image_size: "400x" }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="lg:col-span-2 space-y-8 md:space-y-10">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'title' %}
+            <h1 class="text-2xl font-bold" {{ block.shopify_attributes }}>{{ product.title }}</h1>
+          {% when 'price' %}
+            <div class="text-xl font-semibold product-price" {{ block.shopify_attributes }}>
+              {% assign v = product.selected_or_first_available_variant %}
+              <span class="text-gray-900">{{ v.price | money }}</span>
+              {% if v.compare_at_price > v.price %}
+                <span class="text-gray-500 line-through ml-2">{{ v.compare_at_price | money }}</span>
+              {% endif %}
+            </div>
+          {% when 'variant_picker' %}
+            <div {{ block.shopify_attributes }}>
+              {% assign first_variant = product.selected_or_first_available_variant %}
+              {% if product.variants.size > 1 %}
+                <label class="sr-only" for="product-variant-{{ section.id }}">{{ 'products.product.select_variant' | t }}</label>
+                <select id="product-variant-{{ section.id }}" name="id" form="ProductForm-{{ section.id }}" class="border rounded-md px-3 py-2 w-full">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}" {% if variant.id == first_variant.id %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>
+                      {{ variant.title }} {% unless variant.available %}- {{ 'products.product.sold_out' | t }}{% endunless %}
+                    </option>
+                  {% endfor %}
+                </select>
+              {% else %}
+                <input type="hidden" name="id" form="ProductForm-{{ section.id }}" value="{{ first_variant.id }}">
+              {% endif %}
+            </div>
+          {% when 'quantity' %}
+            <div {{ block.shopify_attributes }}>
+              <label for="Quantity-{{ section.id }}" class="sr-only">{{ 'products.product.quantity.label' | t }}</label>
+              <input id="Quantity-{{ section.id }}" class="border rounded-md px-3 py-2 w-24" type="number" name="quantity" form="ProductForm-{{ section.id }}" min="1" value="1" inputmode="numeric" pattern="[0-9]*">
+            </div>
+          {% when 'buy_buttons' %}
+            <div class="space-y-4 product-actions" {{ block.shopify_attributes }}>
+              {% assign form_id = 'ProductForm-' | append: section.id %}
+              {% form 'product', product, id: form_id %}
+                <button type="submit" class="button primary-button w-full">{{ 'products.product.add_to_cart' | t }}</button>
+                <div class="mt-2">{{ form | payment_button }}</div>
+              {% endform %}
+            </div>
+          {% when 'description' %}
+            <div class="prose" {{ block.shopify_attributes }}>
+              {{ product.description }}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% stylesheet %}
+    .prose p{margin:1rem 0}
+    .product-price{margin-top:0.25rem}
+    .product-actions{margin-top:0.5rem}
+  {% endstylesheet %}
+</div>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [],
+  "blocks": [
+    { "type": "title", "name": "Title", "limit": 1 },
+    { "type": "price", "name": "Price", "limit": 1 },
+    { "type": "variant_picker", "name": "Variant picker", "limit": 1 },
+    { "type": "quantity", "name": "Quantity", "limit": 1 },
+    { "type": "buy_buttons", "name": "Buy buttons", "limit": 1 },
+    { "type": "description", "name": "Description", "limit": 1 }
+  ],
+  "presets": [
+    {
+      "name": "Product",
+      "blocks": [
+        { "type": "title" },
+        { "type": "price" },
+        { "type": "variant_picker" },
+        { "type": "quantity" },
+        { "type": "buy_buttons" },
+        { "type": "description" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

@@ -1502,6 +1502,8 @@
     display: flex;
     flex-direction: row;
     column-gap: calc(var(--spacing) * 3);
+    justify-content: center;
+    align-items: center;
     border-radius: var(--radius-lg);
     padding-inline: calc(var(--spacing) * 5);
     padding-block: calc(var(--spacing) * 3);
@@ -1541,17 +1543,17 @@
   inherits: false;
 }
 @property --tw-gradient-from {
-  syntax: "<color>";
+  syntax: "*";
   inherits: false;
   initial-value: #0000;
 }
 @property --tw-gradient-via {
-  syntax: "<color>";
+  syntax: "*";
   inherits: false;
   initial-value: #0000;
 }
 @property --tw-gradient-to {
-  syntax: "<color>";
+  syntax: "*";
   inherits: false;
   initial-value: #0000;
 }
@@ -1564,17 +1566,17 @@
   inherits: false;
 }
 @property --tw-gradient-from-position {
-  syntax: "<length-percentage>";
+  syntax: "*";
   inherits: false;
   initial-value: 0%;
 }
 @property --tw-gradient-via-position {
-  syntax: "<length-percentage>";
+  syntax: "*";
   inherits: false;
   initial-value: 50%;
 }
 @property --tw-gradient-to-position {
-  syntax: "<length-percentage>";
+  syntax: "*";
   inherits: false;
   initial-value: 100%;
 }
@@ -1631,7 +1633,7 @@
   inherits: false;
 }
 @property --tw-ring-offset-width {
-  syntax: "<length>";
+  syntax: "*";
   inherits: false;
   initial-value: 0px;
 }
